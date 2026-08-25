@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>YES GAY TOKEN v13 — The gayest coin in crypto</title>
+<meta name="description" content="YES GAY ($YESGAY). Love. Pride. Profit. Together.">
+<meta property="og:title" content="YES GAY TOKEN">
+<meta property="og:description" content="Love. Pride. Profit. Together.">
+<meta property="og:image" content="/poster.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/poster.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Archivo+Black&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --ink:#07030f; --magenta:#ff2ea6; --cyan:#22d3ee; --lime:#7cf03d;
+  --yellow:#ffd93d; --orange:#ff7a1a; --white:#fff;
+  --dim:rgba(255,255,255,.85); --glass:rgba(24,9,52,.55);
+  --stroke:rgba(255,255,255,.28); --radius:26px;
+  --rainbow:linear-gradient(90deg,#ff2ea6,#ff7a1a,#ffd93d,#7cf03d,#22d3ee,#a855f7,#ff2ea6);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;min-height:100dvh;font-family:'Space Grotesk',system-ui,sans-serif;
+  color:var(--white);background:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+
+.poster-bg{position:fixed;inset:0;z-index:-2;
+  background:url('/poster.jpg') center/cover no-repeat fixed}
+.poster-veil{position:fixed;inset:0;z-index:-1;
+  background:
+    radial-gradient(70% 50% at 82% 18%,rgba(255,46,166,.30),transparent 60%),
+    radial-gradient(65% 48% at 12% 42%,rgba(34,211,238,.28),transparent 60%),
+    radial-gradient(60% 45% at 50% 96%,rgba(168,85,247,.30),transparent 62%),
+    radial-gradient(55% 40% at 88% 78%,rgba(255,217,61,.18),transparent 60%),
+    linear-gradient(180deg,rgba(10,4,24,.26),rgba(10,4,24,.44))}
+
+/* Franja de orgullo fija arriba */
+body::before{content:'';position:fixed;top:0;left:0;right:0;height:6px;z-index:10;
+  background:linear-gradient(90deg,#ff2ea6,#ff7a1a,#ffd93d,#7cf03d,#22d3ee,#a855f7,#ff2ea6);
+  background-size:220% auto;animation:flow 6s linear infinite}
+@media (max-width:900px){.poster-bg{background-attachment:scroll}}
+
+main{position:relative;max-width:1180px;margin:0 auto;
+  padding:clamp(20px,5vw,64px) clamp(16px,4vw,32px) 64px}
+
+.halo-card::after{content:'';position:absolute;inset:0;border-radius:var(--radius);
+  pointer-events:none;opacity:.5;
+  background:
+    radial-gradient(80% 60% at 100% 0%,rgba(255,46,166,.22),transparent 58%),
+    radial-gradient(70% 55% at 0% 100%,rgba(34,211,238,.20),transparent 58%)}
+.halo-card > *{position:relative;z-index:1}
+.halo-card{position:relative;border-radius:var(--radius);background:var(--glass);
+  backdrop-filter:blur(22px) saturate(140%);-webkit-backdrop-filter:blur(22px) saturate(140%);
+  border:1px solid var(--stroke);padding:clamp(26px,4.5vw,56px);overflow:hidden}
+.halo-card::before{content:'';position:absolute;inset:-2px;
+  border-radius:calc(var(--radius) + 2px);padding:2px;
+  background:conic-gradient(from var(--ang,0deg),#ff2ea6,#ff7a1a,#ffd93d,#7cf03d,#22d3ee,#a855f7,#ff2ea6);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;
+  mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  mask-composite:exclude;animation:spin 9s linear infinite;pointer-events:none}
+@property --ang{syntax:'<angle>';initial-value:0deg;inherits:false}
+@keyframes spin{to{--ang:360deg}}
+
+.eyebrow{margin:0 0 18px;font-size:.72rem;font-weight:800;letter-spacing:.22em;
+  text-transform:uppercase;background:var(--rainbow);background-size:220% auto;
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  animation:flow 6s linear infinite}
+.wordmark{font-family:'Lobster',cursive;font-size:clamp(3.6rem,13vw,8rem);line-height:.92;
+  margin:0 0 12px;background:var(--rainbow);background-size:220% auto;
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  animation:flow 7s linear infinite;filter:drop-shadow(0 0 26px rgba(255,46,166,.45))}
+@keyframes flow{to{background-position:220% center}}
+.tagline{font-family:'Archivo Black',sans-serif;font-size:clamp(1rem,2.6vw,1.5rem);
+  letter-spacing:.04em;margin:0 0 22px;display:flex;flex-wrap:wrap;gap:.5em}
+.tagline .c1{color:var(--magenta)}.tagline .c2{color:var(--yellow)}
+.tagline .c3{color:var(--lime)}.tagline .c4{color:var(--cyan)}
+.h2{font-family:'Archivo Black',sans-serif;font-size:clamp(2.2rem,6vw,3.6rem);
+  line-height:1.02;margin:0 0 18px;text-transform:uppercase}
+.grad{background:linear-gradient(92deg,var(--magenta),var(--orange),var(--yellow),var(--lime),var(--cyan));
+  background-size:200% auto;animation:flow 6s linear infinite;
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.lede{font-size:clamp(.98rem,1.7vw,1.1rem);line-height:1.62;color:var(--dim);
+  max-width:52ch;margin:0 0 26px}
+
+.countdown{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 28px}
+.cd-box{min-width:74px;text-align:center;padding:12px 14px;border-radius:16px;
+  background:rgba(255,255,255,.1);border:1px solid rgba(255,217,61,.45);
+  box-shadow:0 0 22px -8px rgba(255,217,61,.55)}
+.cd-box b{display:block;font-family:'Archivo Black',sans-serif;font-size:1.7rem;
+  line-height:1;color:var(--yellow)}
+.cd-box span{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--dim)}
+
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin:0 0 28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  padding:15px 24px;border-radius:999px;font-family:'Space Grotesk',sans-serif;
+  font-size:.92rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;
+  text-decoration:none;border:0;cursor:pointer;
+  transition:transform .18s ease,box-shadow .18s ease,opacity .18s ease}
+.btn svg{width:19px;height:19px;fill:currentColor;flex:none}
+.btn.full{width:100%}
+.btn-buy{color:#12040c;
+  background:linear-gradient(92deg,var(--yellow),var(--orange),var(--magenta),#a855f7);
+  background-size:180% auto;box-shadow:0 10px 34px -10px rgba(255,46,166,.75)}
+.btn-buy:hover:not(:disabled){transform:translateY(-2px);background-position:100% center}
+.btn-ghost{color:var(--white);background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.32)}
+.btn-ghost:hover{transform:translateY(-2px);background:rgba(255,255,255,.13)}
+.btn:disabled,.btn[aria-disabled="true"]{opacity:.42;cursor:not-allowed;transform:none;box-shadow:none}
+.btn:focus-visible,.drop:focus-visible,input:focus-visible{outline:3px solid var(--cyan);outline-offset:3px}
+
+.contract{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:14px 18px;
+  border-radius:16px;background:rgba(0,0,0,.4);border:1px solid var(--stroke)}
+.ca-label{font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--cyan);font-weight:700}
+.contract code{font-family:ui-monospace,Menlo,monospace;font-size:.82rem;
+  word-break:break-all;color:var(--white)}
+.ca-copy{margin-left:auto;padding:8px 16px;border-radius:999px;
+  background:rgba(255,255,255,.1);color:var(--white);border:1px solid var(--stroke);
+  cursor:pointer;font-family:inherit;font-size:.72rem;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase}
+
+.hero{padding:clamp(30px,8vh,90px) 0 clamp(24px,5vh,46px)}
+.hero-card{max-width:920px}
+.glam{padding:0 0 clamp(30px,6vh,60px)}
+.glam-card{display:grid;gap:clamp(28px,4vw,52px);grid-template-columns:1fr 1fr;align-items:start}
+@media (max-width:880px){.glam-card{grid-template-columns:1fr}}
+
+.feats{list-style:none;padding:0;margin:0;display:grid;gap:11px}
+.feats li{position:relative;padding-left:30px;font-size:.94rem;color:var(--dim)}
+.feats li::before{content:'✓';position:absolute;left:0;top:-1px;color:var(--lime);font-weight:700}
+.gate-note{margin:24px 0 0;padding:14px 16px;border-radius:14px;font-size:.86rem;
+  line-height:1.5;color:var(--dim);background:rgba(34,211,238,.08);
+  border:1px solid rgba(34,211,238,.28)}
+.gate-note b{color:var(--cyan)}
+
+.field{margin:0 0 18px}
+.field label{display:block;margin:0 0 9px;font-size:.68rem;font-weight:700;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--dim)}
+input[type=text]{width:100%;padding:15px 18px;border-radius:14px;background:rgba(0,0,0,.45);
+  border:1px solid var(--stroke);color:var(--white);font-family:inherit;font-size:1rem}
+input[type=text]::placeholder{color:rgba(255,255,255,.3)}
+
+.niveles{display:flex;gap:6px;flex-wrap:wrap}
+.nivel{min-width:70px}
+.nivel{flex:1;padding:12px 8px;border-radius:12px;cursor:pointer;
+  background:rgba(255,255,255,.08);border:1px solid var(--stroke);color:var(--white);
+  font-family:inherit;font-size:.8rem;font-weight:700;letter-spacing:.06em;
+  text-transform:uppercase;transition:background .18s,border-color .18s}
+.nivel:hover{background:rgba(255,255,255,.16)}
+.nivel.activo{background:linear-gradient(92deg,var(--magenta),#a855f7);
+  border-color:transparent;color:#fff}
+.consent{display:flex;gap:12px;align-items:flex-start;padding:15px 17px;margin:0 0 20px;
+  border-radius:14px;background:rgba(255,217,61,.07);border:1px solid rgba(255,217,61,.3)}
+.consent input{width:20px;height:20px;margin:1px 0 0;accent-color:var(--magenta);
+  flex:none;cursor:pointer}
+.consent label{font-size:.86rem;line-height:1.5;color:rgba(255,255,255,.86);cursor:pointer}
+
+.drop{position:relative;display:grid;place-items:center;min-height:260px;padding:22px;
+  cursor:pointer;border-radius:18px;overflow:hidden;background:rgba(0,0,0,.45);
+  border:2px dashed rgba(255,255,255,.22);transition:border-color .2s,background .2s}
+.drop:hover,.drop.over{border-color:var(--magenta);background:rgba(255,46,166,.08)}
+.drop.filled{border-style:solid;border-color:var(--stroke);padding:0}
+.drop-empty{display:grid;gap:7px;justify-items:center;text-align:center}
+.drop-icon{font-size:2.4rem;line-height:1;color:var(--magenta)}
+.drop-empty small{font-size:.78rem;color:var(--dim)}
+.drop img{width:100%;height:100%;max-height:360px;object-fit:cover;display:block}
+.replace{position:absolute;right:14px;bottom:14px;padding:9px 16px;border-radius:999px;
+  background:rgba(0,0,0,.78);color:var(--white);border:1px solid var(--stroke);
+  cursor:pointer;font-family:inherit;font-size:.74rem;font-weight:700}
+
+.msg{margin:0 0 16px;padding:14px 16px;border-radius:14px;font-size:.88rem;line-height:1.5;
+  background:rgba(255,46,166,.12);border:1px solid rgba(255,46,166,.42);color:#ffd7ec}
+.msg.ok{background:rgba(124,240,61,.12);border-color:rgba(124,240,61,.42);color:#e2ffd0}
+.wallet-status{margin:10px 0 0;font-size:.84rem;color:var(--dim)}
+
+.result{margin-top:24px}
+.result img{width:100%;border-radius:18px;display:block;border:1px solid var(--stroke);
+  box-shadow:0 20px 60px -22px rgba(255,46,166,.6)}
+.result-actions{display:flex;gap:11px;margin-top:15px;flex-wrap:wrap}
+.result-actions .btn{flex:1;min-width:150px}
+.share-note{margin:12px 0 0;font-size:.8rem;line-height:1.5;color:var(--dim)}
+
+.loading #generate-label::after{content:'';display:inline-block;width:14px;height:14px;
+  margin-left:10px;vertical-align:-2px;border-radius:50%;
+  border:2px solid rgba(18,4,12,.35);border-top-color:#12040c;animation:sp .7s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+
+footer{max-width:820px;margin:0 auto;padding:44px 8px 12px;text-align:center}
+.disclaimer{font-size:.78rem;line-height:1.65;color:rgba(255,255,255,.6);margin:0 0 18px;
+  text-shadow:0 1px 8px rgba(0,0,0,.8)}
+.madeby{font-family:'Lobster',cursive;font-size:1.15rem;background:var(--rainbow);
+  background-size:220% auto;-webkit-background-clip:text;background-clip:text;
+  color:transparent;animation:flow 7s linear infinite;margin:0}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;
+    transition-duration:.001ms!important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<div class="poster-bg" aria-hidden="true"></div>
+<div class="poster-veil" aria-hidden="true"></div>
+
+<main>
+
+  <section class="hero">
+    <div class="halo-card hero-card">
+      <p class="eyebrow" id="launch-eyebrow">Lanzamiento el 10</p>
+      <h1 class="wordmark">Yes&nbsp;Gay</h1>
+      <p class="tagline">
+        <span class="c1">Love.</span><span class="c2">Pride.</span>
+        <span class="c3">Profit.</span><span class="c4">Together.</span>
+      </p>
+      <p class="lede">
+        La moneda mas brillante de Solana. Sin promesas raras, sin utilidad
+        inventada: una comunidad, un chiste bueno y mucho arcoiris.
+      </p>
+
+      <div class="countdown" id="countdown" hidden>
+        <div class="cd-box"><b id="cd-d">00</b><span>dias</span></div>
+        <div class="cd-box"><b id="cd-h">00</b><span>horas</span></div>
+        <div class="cd-box"><b id="cd-m">00</b><span>min</span></div>
+        <div class="cd-box"><b id="cd-s">00</b><span>seg</span></div>
+      </div>
+
+      <div class="actions">
+        <a class="btn btn-buy" id="btn-buy" target="_blank" rel="noopener">
+          <svg width="19" height="19" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 7v10l8 5 8-5V7z"/></svg>
+          Comprar en pump.fun
+        </a>
+        <a class="btn btn-ghost" id="btn-x" target="_blank" rel="noopener">
+          <svg width="19" height="19" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2H22l-7.1 8.1L23.3 22h-6.6l-5.2-6.8L5.5 22H2.4l7.6-8.7L1.1 2h6.8l4.7 6.2Zm-1.1 18h1.7L7.3 3.8H5.5Z"/></svg>
+          X / Twitter
+        </a>
+        <a class="btn btn-ghost" id="btn-tg" target="_blank" rel="noopener">
+          <svg width="19" height="19" viewBox="0 0 24 24" aria-hidden="true"><path d="M21.9 4.3 18.7 19c-.2 1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.4-5 9.1-8.2c.4-.3-.1-.5-.6-.2L6.3 12.7 1.5 11.2c-1-.3-1-1 .2-1.5l19-7.3c.9-.3 1.6.2 1.2 1.9Z"/></svg>
+          Telegram
+        </a>
+      </div>
+
+      <div class="contract">
+        <span class="ca-label">Contrato</span>
+        <code id="ca-text">Proximamente</code>
+        <button class="ca-copy" id="ca-copy" type="button" hidden>Copiar</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="glam">
+    <div class="halo-card glam-card">
+
+      <div>
+        <p class="eyebrow">Glow-up lab</p>
+        <h2 class="h2">Ponte<br><span class="grad">fabuloso.</span></h2>
+        <p class="lede">
+          Sube tu foto y te ponemos labial, sombra arcoiris, rubor y purpurina.
+          Se procesa en tu propio navegador: la foto no sale de tu telefono.
+        </p>
+        <ul class="feats">
+          <li>Instantaneo y privado</li>
+          <li>Tu cara, siempre reconocible</li>
+          <li>Descarga y comparte en un clic</li>
+        </ul>
+        <p class="gate-note" id="gate-note" hidden>
+          El generador es para holders de <b>$YESGAY</b>. Conecta tu wallet
+          para comprobar tu balance.
+        </p>
+      </div>
+
+      <div>
+        <div class="field" id="wallet-field" hidden>
+          <label>Tu wallet</label>
+          <button class="btn btn-ghost full" id="btn-wallet" type="button">Conectar Phantom</button>
+          <p class="wallet-status" id="wallet-status"></p>
+        </div>
+
+        <div class="consent">
+          <input type="checkbox" id="consent">
+          <label for="consent">
+            Esta foto es mia, o tengo permiso de la persona que aparece en ella
+            para transformarla y publicarla.
+          </label>
+        </div>
+
+        <div class="field">
+          <label for="intensidad">Intensidad del glow-up</label>
+          <div class="niveles">
+            <button type="button" class="nivel" data-nivel="suave">Suave</button>
+            <button type="button" class="nivel activo" data-nivel="fabuloso">Fabuloso</button>
+            <button type="button" class="nivel" data-nivel="extra">Extra</button>
+            <button type="button" class="nivel" data-nivel="drag">Drag</button>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="name">Nombre para el archivo</label>
+          <input type="text" id="name" maxlength="30" placeholder="Alberto" autocomplete="off">
+        </div>
+
+        <div class="field">
+          <label>Tu foto</label>
+          <div class="drop" id="drop" tabindex="0" role="button" aria-label="Subir foto">
+            <input type="file" id="file" accept="image/jpeg,image/png,image/webp" hidden>
+            <div class="drop-empty" id="drop-empty">
+              <span class="drop-icon">＋</span>
+              <b>Toca para subir una foto</b>
+              <small>JPG, PNG o WebP · maximo 8 MB</small>
+            </div>
+            <img id="preview" alt="Vista previa" hidden>
+            <button class="replace" id="replace" type="button" hidden>Cambiar foto</button>
+          </div>
+        </div>
+
+        <p class="msg" id="msg" hidden></p>
+
+        <button class="btn btn-buy full" id="generate" type="button" disabled>
+          <svg width="19" height="19" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 2.2 5.6L20 9.8l-4.4 4 1 6.2-4.6-3-4.6 3 1-6.2L4 9.8l5.8-2.2z"/></svg>
+          <span id="generate-label">Generar mi glow-up</span>
+        </button>
+
+        <div class="result" id="result" hidden>
+          <img id="result-img" alt="Tu retrato transformado">
+          <div class="result-actions">
+            <a class="btn btn-ghost" id="download" download>Descargar</a>
+            <a class="btn btn-buy" id="share" target="_blank" rel="noopener">Compartir en X</a>
+          </div>
+          <p class="share-note">
+            Se abre X con el texto listo. La imagen la adjuntas tu desde la descarga.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p class="disclaimer">
+      $YESGAY es una memecoin creada para entretenimiento y comunidad. No es un
+      instrumento de inversion, no promete rendimientos y no constituye asesoria
+      financiera. Las criptomonedas son volatiles: puedes perder todo lo que
+      inviertas. Compra solo lo que estes dispuesto a perder.
+    </p>
+    <p class="madeby">Love. Pride. Profit. Together.</p>
+    <p style="font-size:.7rem;color:rgba(255,255,255,.35);margin:10px 0 0">build v13 CEJAS</p>
+  <section class="holders">
+  <h2>Mayores holders</h2>
+  <iframe
+    id="cmt-holders"
+    src="https://cryptomarkettracker.net/widget_holders.html?mint=6iz4scC6M5G3HvUm5bduP2YmJBvonx1XDjVxm9Krpump&simbolo=$YESGAY&tema=orgullo&v=2"
+    style="width:100%;max-width:640px;height:820px;border:0;display:block;margin:0 auto"
+    loading="lazy"
+    title="Mayores holders de YESGAY"></iframe>
+</section>
+<script>
+window.addEventListener('message', function (e) {
+  if (e.data && e.data.cmtWidget === 'altura') {
+    var f = document.getElementById('cmt-holders');
+    if (f) f.style.height = (e.data.alto + 20) + 'px';
+  }
+});
+</script>
+</footer>
+
+</main>
+
+<script type="module" src="/glam.js"></script>
+
+<script>
+/* ============================================================
+   CONFIGURACION — lo unico que tienes que tocar
+   ============================================================ */
+var CONFIG = {
+  MINT: '',                                  // mint de pump.fun
+  PUMPFUN_URL: '',
+  X_URL: '',
+  TELEGRAM_URL: '',
+  FECHA_LANZAMIENTO: '2026-08-10T16:00:00Z', // 12:00 hora Venezuela
+  GATE_ACTIVO: false,                        // true cuando lances el token
+  TEXTO_X: 'Acabo de recibir mi glow-up de $YESGAY 🏳️‍🌈✨\n\nLove. Pride. Profit. Together.',
+  HASHTAGS_X: 'YESGAY,Solana,pumpfun,Pride'
+};
+/* ========================================================== */
+
+(function () {
+  var $ = function (id) { return document.getElementById(id) };
+  var MAX_BYTES = 8 * 1024 * 1024;
+  var MAX_LADO = 1024;
+  var fotoBase64 = null, fotoMime = null, wallet = null;
+
+  /* --- Enlaces y contrato --- */
+  [['btn-buy', CONFIG.PUMPFUN_URL], ['btn-x', CONFIG.X_URL], ['btn-tg', CONFIG.TELEGRAM_URL]]
+    .forEach(function (par) {
+      var el = $(par[0]);
+      if (par[1]) { el.href = par[1] }
+      else { el.setAttribute('aria-disabled', 'true'); el.title = 'Disponible en el lanzamiento' }
+    });
+
+  if (CONFIG.MINT) {
+    $('ca-text').textContent = CONFIG.MINT;
+    $('ca-copy').hidden = false;
+    $('ca-copy').addEventListener('click', function () {
+      navigator.clipboard.writeText(CONFIG.MINT);
+      $('ca-copy').textContent = 'Copiado';
+      setTimeout(function () { $('ca-copy').textContent = 'Copiar' }, 1600);
+    });
+  }
+
+  /* --- Cuenta regresiva --- */
+  var destino = new Date(CONFIG.FECHA_LANZAMIENTO).getTime();
+  if (!isNaN(destino)) {
+    $('countdown').hidden = false;
+    var timer = setInterval(tic, 1000); tic();
+  }
+  function tic () {
+    var falta = destino - Date.now();
+    if (falta <= 0) {
+      clearInterval(timer);
+      $('countdown').hidden = true;
+      $('launch-eyebrow').textContent = 'Ya estamos en vivo';
+      return;
+    }
+    var p = function (n) { return String(n).padStart(2, '0') };
+    $('cd-d').textContent = p(Math.floor(falta / 864e5));
+    $('cd-h').textContent = p(Math.floor(falta / 36e5) % 24);
+    $('cd-m').textContent = p(Math.floor(falta / 6e4) % 60);
+    $('cd-s').textContent = p(Math.floor(falta / 1e3) % 60);
+  }
+
+  /* --- Mensajes --- */
+  function aviso (texto, ok) {
+    var el = $('msg');
+    if (!texto) { el.hidden = true; return }
+    el.textContent = texto;
+    el.className = ok ? 'msg ok' : 'msg';
+    el.hidden = false;
+  }
+
+  /* --- Subida de foto --- */
+  function reducir (file) {
+    return new Promise(function (resolve, reject) {
+      var img = new Image(), url = URL.createObjectURL(file);
+      img.onload = function () {
+        URL.revokeObjectURL(url);
+        var e = Math.min(1, MAX_LADO / Math.max(img.width, img.height));
+        var c = document.createElement('canvas');
+        c.width = Math.round(img.width * e);
+        c.height = Math.round(img.height * e);
+        c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+        resolve(c.toDataURL('image/jpeg', 0.9));
+      };
+      img.onerror = function () { URL.revokeObjectURL(url); reject(new Error('x')) };
+      img.src = url;
+    });
+  }
+
+  function aceptar (file) {
+    if (!file) return;
+    if (!/^image\/(jpeg|png|webp)$/.test(file.type)) return aviso('Ese formato no sirve. Usa JPG, PNG o WebP.');
+    if (file.size > MAX_BYTES) return aviso('La foto pesa mas de 8 MB. Prueba con una mas liviana.');
+    reducir(file).then(function (dataUrl) {
+      fotoBase64 = dataUrl.split(',')[1];
+      fotoMime = 'image/jpeg';
+      $('preview').src = dataUrl;
+      $('preview').hidden = false;
+      $('drop-empty').hidden = true;
+      $('replace').hidden = false;
+      $('drop').classList.add('filled');
+      aviso(null); revisar();
+    }).catch(function () { aviso('No se pudo procesar esa imagen. Prueba con otra.') });
+  }
+
+  $('drop').addEventListener('click', function (e) { if (e.target.id !== 'replace') $('file').click() });
+  $('drop').addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); $('file').click() }
+  });
+  $('replace').addEventListener('click', function (e) { e.stopPropagation(); $('file').click() });
+  $('file').addEventListener('change', function (e) { aceptar(e.target.files[0]) });
+  ['dragenter', 'dragover'].forEach(function (ev) {
+    $('drop').addEventListener(ev, function (e) { e.preventDefault(); $('drop').classList.add('over') });
+  });
+  ['dragleave', 'drop'].forEach(function (ev) {
+    $('drop').addEventListener(ev, function (e) { e.preventDefault(); $('drop').classList.remove('over') });
+  });
+  $('drop').addEventListener('drop', function (e) { aceptar(e.dataTransfer.files[0]) });
+
+  /* --- Puerta de holders --- */
+  if (CONFIG.GATE_ACTIVO) {
+    $('wallet-field').hidden = false;
+    $('gate-note').hidden = false;
+    $('btn-wallet').addEventListener('click', function () {
+      var prov = (window.phantom && window.phantom.solana) || window.solana;
+      if (!prov || !prov.isPhantom) return aviso('No encontramos Phantom. Instalalo desde phantom.app y recarga.');
+      prov.connect().then(function (r) {
+        var address = r.publicKey.toString();
+        var mensaje = 'YES GAY - verifica tu wallet\n' + address + '\n' + Date.now();
+        return prov.signMessage(new TextEncoder().encode(mensaje), 'utf8').then(function (f) {
+          var b = ''; new Uint8Array(f.signature).forEach(function (n) { b += String.fromCharCode(n) });
+          wallet = { address: address, message: mensaje, signature: btoa(b) };
+          $('wallet-status').textContent = 'Conectada: ' + address.slice(0, 4) + '…' + address.slice(-4);
+          $('btn-wallet').textContent = 'Wallet conectada';
+          aviso(null); revisar();
+        });
+      }).catch(function () { aviso('No se pudo conectar la wallet. Intenta de nuevo.') });
+    });
+  }
+
+  /* --- Habilitar boton --- */
+  function revisar () {
+    $('generate').disabled = !(fotoBase64 && $('consent').checked && (!CONFIG.GATE_ACTIVO || wallet));
+  }
+  $('consent').addEventListener('change', revisar);
+
+  /* --- Intensidad --- */
+  var intensidad = 'fabuloso';
+  document.querySelectorAll('.nivel').forEach(function (b) {
+    b.addEventListener('click', function () {
+      document.querySelectorAll('.nivel').forEach(function (o) { o.classList.remove('activo') });
+      b.classList.add('activo');
+      intensidad = b.dataset.nivel;
+    });
+  });
+
+  /* --- Generar (todo en el navegador, sin API) --- */
+  $('generate').addEventListener('click', function () {
+    var boton = $('generate');
+    boton.disabled = true;
+    boton.classList.add('loading');
+    $('generate-label').textContent = 'Maquillando';
+    $('result').hidden = true;
+    aviso(null);
+
+    var terminar = function () {
+      boton.classList.remove('loading');
+      $('generate-label').textContent = 'Generar mi glow-up';
+      revisar();
+    };
+
+    var arrancar = function () {
+      window.glamMaquillar('data:image/jpeg;base64,' + fotoBase64, intensidad)
+        .then(function (r) {
+          var nombre = ($('name').value.trim() || 'yesgay').replace(/[^\w\-]+/g, '_');
+          $('result-img').src = r.imagen;
+          $('download').href = r.imagen;
+          $('download').download = nombre + '-yesgay.jpg';
+          $('share').href = 'https://twitter.com/intent/tweet?text='
+            + encodeURIComponent(CONFIG.TEXTO_X) + '&hashtags=' + encodeURIComponent(CONFIG.HASHTAGS_X);
+          $('result').hidden = false;
+          $('result').scrollIntoView({ behavior: 'smooth', block: 'center' });
+          aviso(r.caras > 1
+            ? 'Listo, maquillamos ' + r.caras + ' caras. Descarga y comparte.'
+            : 'Listo. Descarga la imagen y compartela.', true);
+          terminar();
+        })
+        .catch(function (e) {
+          aviso(e.message || 'No se pudo procesar la foto.');
+          terminar();
+        });
+    };
+
+    if (window.glamListo) {
+      arrancar();
+    } else {
+      $('generate-label').textContent = 'Cargando motor';
+      window.addEventListener('glam-listo', arrancar, { once: true });
+      setTimeout(function () {
+        if (!window.glamListo) { aviso('El motor de maquillaje no cargo. Revisa tu conexion y recarga.'); terminar(); }
+      }, 25000);
+    }
+  });
+})();
+</script>
+</body>
+</html>
